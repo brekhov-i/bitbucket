@@ -1,0 +1,151 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Merriweather", sans-serif;
+  font-size: vw(16);
+  background-color: #f6f3f3;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  box-sizing: border-box;
+  color: inherit;
+}
+
+h1 {
+  font-size: vw(24);
+  font-weight: bold;
+  line-height: vw(36);
+}
+h2 {
+  font-size: vw(18);
+  font-weight: normal;
+  line-height: vw(27);
+}
+h3 {
+  font-size: vw(16);
+  font-weight: bold;
+  line-height: vw(24);
+}
+h4 {
+  font-size: vw(14);
+  font-weight: bold;
+  line-height: vw(21);
+}
+h5 {
+  font-size: vw(14);
+  font-weight: normal;
+  line-height: vw(21);
+}
+h6 {
+  font-size: vw(14);
+  font-weight: 300;
+  line-height: vw(21);
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  background-color: #403432;
+  width: vw(118);
+  height: vw(48);
+  font-weight: bold;
+  font-size: vw(14);
+  line-height: vw(21);
+  color: #f4f6f9;
+  transition: 0.3s all ease-in-out;
+  &:hover {
+    transition: 0.3s all ease-in-out;
+    background-color: #776763;
+  }
+  &:disabled {
+    background-color: #c1b4b1;
+  }
+  &.active {
+    background-color: #5b3a32;
+  }
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+input,
+textarea {
+  border: none;
+  box-shadow: none;
+  font-size: inherit;
+  color: inherit;
+  &::placeholder {
+    font-family: inherit;
+    color: inherit;
+    font-size: inherit;
+  }
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.container {
+  max-width: vw(1216);
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+@include breakpoint(1600) {
+  h1 {
+    font-size: vw(28);
+    line-height: vw(40);
+  }
+  h2 {
+    font-size: vw(22);
+    line-height: vw(31);
+  }
+  h3 {
+    font-size: vw(20);
+    line-height: vw(28);
+  }
+  h4 {
+    font-size: vw(18);
+    line-height: vw(25);
+  }
+  h5 {
+    font-size: vw(18);
+    line-height: vw(25);
+  }
+  h6 {
+    font-size: vw(18);
+    line-height: vw(25);
+  }
+  button {
+    width: vw(155);
+    height: vw(58);
+    font-size: vw(18);
+    line-height: vw(25);
+  }
+  img {
+    max-width: none;
+  }
+}
