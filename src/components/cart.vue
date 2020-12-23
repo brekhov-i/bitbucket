@@ -201,5 +201,18 @@ export default {
         });
     },
   },
+  watch: {
+    btnActive(active) {
+      localStorage.cartId = this.cartData.id;
+      localStorage.btnActive = active;
+    },
+  },
+  mounted() {
+    if (localStorage.btnActive) {
+      if (parseInt(localStorage.cartId) === this.cartData.id) {
+        this.btnActive = localStorage.btnActive;
+      }
+    }
+  },
 };
 </script>
